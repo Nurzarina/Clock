@@ -7,10 +7,11 @@ body {
 }
 
 .clock {
-    width: 200px;
-    height: 200px;                                      /* To create a 200x200px white square for clock face. */
+    width: 400px;
+    height: 400px;                                      /* To create a 200x200px white square for clock face. */
     background: white;
     border: 3px solid grey;
+    border-radius: 10px;
     box-shadow: 3px 2px 10px 5px darkgray;
     position: relative;                                 /* For absolute positioning of clock hands. */
     display: flex;
@@ -29,7 +30,7 @@ body {
 .second-hand {
     background: red;
     width: 2px;                                         /* To make the second-hand thin. */
-    height: 90px;                                       /* To make the second-hand long enough to reach the clock's edge. */
+    height: 130px;                                       /* To make the second-hand long enough to reach the clock's edge. */
     transition-timing-function: steps(60, end);         /* To make the second-hand jumps once per second like a real clock. */
     will-change: transform;                             /* To prevent second-hand appearing thinner at every minute. */
 }
