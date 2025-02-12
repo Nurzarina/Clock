@@ -1,0 +1,10 @@
+.theme-button {
+    margin: 0px 8px auto;
+    margin-left: 40px;
+}
+
+.theme-button:hover {
+    cursor: pointer;
+    background-color: blueviolet;
+    font-size: medium;
+}

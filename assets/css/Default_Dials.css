@@ -9,7 +9,6 @@
 .tick {
     position: absolute;
     font-size: 25px;
-    font-weight: 600;
     top: 30%;
     left: 50%;
     transform-origin: bottom center;

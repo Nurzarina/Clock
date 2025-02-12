@@ -5,8 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Analogue Clock</title>
-    <link rel="stylesheet" href="/assets/css/Dials_1.css" />
+    <link id="theme-stylesheet" rel="stylesheet" href="/assets/css/Default_Dials.css" />
     <link rel="stylesheet" href="/assets/css/SecondsHand.css" />
+    <link rel="stylesheet" href="/assets/css/Buttons.css" />
 </head>
 
 <body>
@@ -57,8 +58,15 @@
             </div>
         </div>
         <div>
-            <button class="theme-button" onclick="changeTheme('/assets/css/Dials_1.css')"></button>
-            <button class="theme-button" onclick="changeTheme('/assets/css/Default.css')"></button>
+            <button class="theme-button" onclick="changeTheme('/assets/css/Dials_1.css')">
+                Theme 1
+            </button>
+            <button class="theme-button" onclick="changeTheme('/assets/css/Dials_2.css')">
+                Theme 2
+            </button>
+            <button class="theme-button" onclick="changeTheme('/assets/css/Default_Dials.css')">
+                Default
+            </button>
         </div>
     </div>
     <script src="/assets/js/SecondsHand.js"></script>
