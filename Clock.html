@@ -1,35 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analogue Clock</title>
-    <link rel="stylesheet" href="Dials.css">
-    <link rel="stylesheet" href="SecondsHand.css">
-</head>
-<body>
-    <div class="clock">
-        <div class="dial">
-            <span class="tick tick-1"><p>12</p></span>
-            <div class="tick tick-2"><p>1</p></div>
-            <div class="tick tick-3"><p>2</p></div>
-            <div class="tick tick-4"><p>3</p></div>
-            <div class="tick tick-5"><p>4</p></div>
-            <div class="tick tick-6"><p>5</p></div>
-            <div class="tick tick-7"><p>6</p></div>
-            <div class="tick tick-8"><p>7</p></div>
-            <div class="tick tick-9"><p>8</p></div>
-            <div class="tick tick-10"><p>9</p></div>
-            <div class="tick tick-11"><p>10</p></div>
-            <div class="tick tick-12"><p>11</p></div>
-        </div>
-        <div class="hand hour-hand"></div>
-        <div class="hand minute-hand"></div>
-        <div class="hand second-hand"></div>                <!--  ".hand" class for common styles shared with other clock hands, ".second-hand" for specific styles for the second-hand.  -->
-        <div class="dials">
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analogue Clock</title>
+    <link rel="stylesheet" href="/assets/css/Dials_1.css" />
+    <link rel="stylesheet" href="/assets/css/SecondsHand.css" />
+</head>
+
+<body>
+    <div class="main">
+        <div class="clock">
+            <!--  ".hand" class for common styles shared with other clock hands, ".*-hand" for specific styles for the each hand.  -->
+            <div class="hand hour-hand"></div>
+            <div class="hand minute-hand"></div>
+            <div class="hand second-hand"></div>
+            <!-- Clock Dials -->
+            <div class="dial">
+                <span class="tick tick-1">
+                    <p>12</p>
+                </span>
+                <div class="tick tick-2">
+                    <p>1</p>
+                </div>
+                <div class="tick tick-3">
+                    <p>2</p>
+                </div>
+                <div class="tick tick-4">
+                    <p>3</p>
+                </div>
+                <div class="tick tick-5">
+                    <p>4</p>
+                </div>
+                <div class="tick tick-6">
+                    <p>5</p>
+                </div>
+                <div class="tick tick-7">
+                    <p>6</p>
+                </div>
+                <div class="tick tick-8">
+                    <p>7</p>
+                </div>
+                <div class="tick tick-9">
+                    <p>8</p>
+                </div>
+                <div class="tick tick-10">
+                    <p>9</p>
+                </div>
+                <div class="tick tick-11">
+                    <p>10</p>
+                </div>
+                <div class="tick tick-12">
+                    <p>11</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button class="theme-button" onclick="changeTheme('/assets/css/Dials_1.css')"></button>
+            <button class="theme-button" onclick="changeTheme('/assets/css/Default.css')"></button>
         </div>
     </div>
-    <script src="SecondsHand.js" defer></script>
+    <script src="/assets/js/SecondsHand.js"></script>
+    <script src="/assets/js/themeSwitcher.js"></script>
 </body>
+
 </html>

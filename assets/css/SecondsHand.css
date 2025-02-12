@@ -6,6 +6,11 @@ body {
     background-color: black;
 }
 
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+
 .clock {
     width: 400px;
     height: 400px;                                      /* To create a 200x200px white square for clock face. */
