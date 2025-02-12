@@ -7,7 +7,7 @@
     <title>Analogue Clock</title>
     <link id="theme-stylesheet" rel="stylesheet" href="/assets/css/Default_Dials.css" />
     <link rel="stylesheet" href="/assets/css/SecondsHand.css" />
-    <link rel="stylesheet" href="/assets/css/Buttons.css" />
+    <link rel="stylesheet" href="/assets/css/Scrollable.css" />
 </head>
 
 <body>
@@ -57,20 +57,36 @@
                 </div>
             </div>
         </div>
-        <div>
-            <button class="theme-button" onclick="changeTheme('/assets/css/Dials_1.css')">
-                Theme 1
-            </button>
-            <button class="theme-button" onclick="changeTheme('/assets/css/Dials_2.css')">
-                Theme 2
-            </button>
-            <button class="theme-button" onclick="changeTheme('/assets/css/Default_Dials.css')">
-                Default
-            </button>
+        <div class="button-container">
+            <button class="scroll-btn" onclick="scrollUp()">▲</button>
+
+            <div class="scroll-wrapper">
+                <div class="buttons">
+                    <button class="theme-button" onclick="changeTheme('/assets/css/Dials_1.css')">
+                        Theme 1
+                    </button>
+                    <button class="theme-button active" onclick="changeTheme('/assets/css/Dials_2.css')">
+                        Theme 2
+                    </button>
+                    <button class="theme-button" onclick="changeTheme('/assets/css/Dials_1.css')">
+                        Theme 3
+                    </button>
+                    <button class="theme-button" onclick="changeTheme('/assets/css/Dials_2.css')">
+                        Theme 4
+                    </button>
+                    <button class="theme-button" onclick="changeTheme('/assets/css/Default_Dials.css')">
+                        Default
+                    </button>
+                </div>
+            </div>
+
+            <button class="scroll-btn" onclick="scrollDown()">▼</button>
         </div>
+
     </div>
     <script src="/assets/js/SecondsHand.js"></script>
     <script src="/assets/js/themeSwitcher.js"></script>
+    <script src="/assets/js/Scrollable.js"></script>
 </body>
 
 </html>

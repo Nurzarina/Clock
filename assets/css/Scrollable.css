@@ -1,0 +1,58 @@
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 0 2em auto;
+}
+
+.scroll-wrapper {
+    width: 10em;
+    height: 9em;                      /* Enought to show 3 buttons. */
+    overflow: hidden;
+    position: relative;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.theme-button {
+    width: 120px;
+    height: 40px;
+    margin: 5px 0;
+    font-size: 16px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
+}
+
+/* Make the middle button bigger */
+.theme-button.active {
+    transform: scale(1.2);
+    font-weight: bold;
+    opacity: 1;
+}
+
+/* Smaller buttons above and below  */
+.btn:not(.active) {
+    transform: scale(0.8);
+    opacity: 0.6;
+}
+
+.scroll-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background: gray;
+    color: white;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+.scroll-btn:hover {
+    background: darkgray;
+}
