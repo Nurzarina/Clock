@@ -1,21 +1,26 @@
-body {
+body, html {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
+    align-items: center;                                /* To center the clock in the middle of the screen. */
+    height: 100%;                                       /* To ensure the page takes the full height. */
+    background-color: black;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
 }
 
 .clock {
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;                                      /* To create a 200x200px white square for clock face. */
     background: white;
-    border: 3px solid black;
-    box-shadow: 5px 8px 10px 5px darkgrey;
-    position: relative;
+    border: 3px solid grey;
+    border-radius: 10px;
+    position: relative;                                 /* For absolute positioning of clock hands. */
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;                                /* To center elements inside the clock. */
 }
 
 .hand {
@@ -28,22 +33,25 @@ body {
 
 .hour-hand {
     width: 6px;
-    height: 50px;
+    height: 5em;
     background: black;
     border-radius: 5px;
+    z-index: 10;
 }
 
 .minute-hand {
     width: 4px;
-    height: 70px;
+    height: 7em;
     background: gray;
     border-radius: 5px;
+    z-index: 5;
 }
 
 .second-hand {
     background: red;
     width: 2px;                                         /* To make the second-hand thin. */
-    height: 130px;                                      /* To make the second-hand long enough to reach the clock's edge. */
+    height: 8em;                                      /* To make the second-hand long enough to reach the clock's edge. */
     transition-timing-function: steps(60, end);         /* To make the second-hand jumps once per second like a real clock. */
     will-change: transform;                             /* To prevent second-hand appearing thinner at every minute. */
+    z-index: 0;
 }

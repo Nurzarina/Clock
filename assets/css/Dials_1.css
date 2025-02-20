@@ -1,9 +1,22 @@
+.clock {
+    background-color: black;
+}
+
+.hour-hand {
+    background-color: aliceblue;
+}
+
+.minute-hand {
+    background-color: lightblue;
+}
+
 .dial {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    color: aquamarine;
 }
 
 .tick {
