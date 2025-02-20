@@ -1,4 +1,4 @@
-# Clock Theme Chooser
+# Clock Theme Chooser (Ongoing)
 
 ## This personal project is done to learn more about CSS styling capabilities.
 
