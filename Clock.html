@@ -7,7 +7,8 @@
     <title>Analogue Clock</title>
     <link rel="stylesheet" href="/assets/css/Clock.css" />
     <link rel="stylesheet" href="/assets/css/Scrollable.css" />
-    <link id="theme-stylesheet" rel="stylesheet" href="/assets/css/themeDef.css" />
+    <!-- <link rel="stylesheet" href="/assets/css/Buttons.css" /> -->
+    <link id="theme-stylesheet" rel="stylesheet" href="/assets/css/theme2.css" />
 </head>
 
 <body>
@@ -62,10 +63,10 @@
 
             <div class="scroll-wrapper">
                 <div class="buttons">
-                    <button class="theme-button active" data-theme="theme1">
+                    <button class="theme-button" data-theme="theme1">
                         Theme 1
                     </button>
-                    <button class="theme-button" data-theme="theme2">
+                    <button class="theme-button active" data-theme="theme2">
                         Theme 2
                     </button>
                     <button class="theme-button" data-theme="theme3">
@@ -84,7 +85,49 @@
         </div>
 
     </div>
-    <script src="/assets/js/SecondsHand.js"></script>
+    <script>
+        const buttons = document.querySelectorAll('.theme-button');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function () {
+                buttons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                const themeName = this.dataset.theme;
+                applyTheme(themeName);
+            });
+        });
+
+        function applyTheme(themeName) {
+            document.getElementById("theme-stylesheet").setAttribute("href", `/assets/css/${themeName}.css`)
+        }
+
+        function scrollUp() {
+            let activeButton = document.querySelector(".theme-button.active");
+            let prevButton = activeButton.previousElementSibling;
+
+            if (prevButton) {
+                activeButton.classList.remove("active");
+                prevButton.classList.add("active");
+                applyTheme(prevButton.dataset.theme);                   // Change the theme based on button.
+            }
+        }
+
+        // Function to make selection scrolled down the theme buttons.
+        function scrollDown() {
+            let activeButton = document.querySelector(".theme-button.active");
+            let nextButton = activeButton.nextElementSibling;
+
+            if (nextButton) {
+                activeButton.classList.remove("active");
+                nextButton.classList.add("active");
+                applyTheme(nextButton.dataset.theme);                  // Change theme based on button.
+            }
+        }
+
+    </script>
+
+    <script src="/assets/js/Clock.js"></script>
     <script src="/assets/js/themeSwitcher.js"></script>
     <script src="/assets/js/Scrollable.js"></script>
 </body>

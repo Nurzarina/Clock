@@ -35,6 +35,10 @@
     opacity: 1;
 }
 
+.theme-button:hover {
+    background-color: aquamarine;
+}
+
 /* Smaller buttons above and below  */
 .btn:not(.active) {
     transform: scale(0.8);
