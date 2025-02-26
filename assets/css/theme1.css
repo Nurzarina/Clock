@@ -38,7 +38,7 @@
 
 .tick-2 p {
     transform-origin: center;
-    transform: rotate(-30deg);
+    transform: rotate(-30deg);                                              /*  To offset the rotation from tick-2 so the number appear upright. */
 }
 
 .tick-3 { 

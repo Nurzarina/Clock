@@ -7,7 +7,7 @@
     <title>Analogue Clock</title>
     <link rel="stylesheet" href="/assets/css/Clock.css" />
     <link rel="stylesheet" href="/assets/css/Scrollable.css" />
-    <link id="theme-stylesheet" rel="stylesheet" href="/assets/css/Default_Dials.css" />
+    <link id="theme-stylesheet" rel="stylesheet" href="/assets/css/themeDef.css" />
 </head>
 
 <body>
@@ -62,19 +62,19 @@
 
             <div class="scroll-wrapper">
                 <div class="buttons">
-                    <button class="theme-button" onclick="changeTheme('/assets/css/Dials_1.css')">
+                    <button class="theme-button active" data-theme="theme1">
                         Theme 1
                     </button>
-                    <button class="theme-button active" onclick="changeTheme('/assets/css/Dials_2.css')">
+                    <button class="theme-button" data-theme="theme2">
                         Theme 2
                     </button>
-                    <button class="theme-button" onclick="changeTheme('/assets/css/Default_Dials.css')">
+                    <button class="theme-button" data-theme="theme3">
                         Theme 3
                     </button>
-                    <button class="theme-button" onclick="changeTheme('/assets/css/Dials_2.css')">
+                    <button class="theme-button" data-theme="theme4">
                         Theme 4
                     </button>
-                    <button class="theme-button" onclick="changeTheme('/assets/css/Default_Dials.css')">
+                    <button class="theme-button" data-theme="themeDef">
                         Default
                     </button>
                 </div>
