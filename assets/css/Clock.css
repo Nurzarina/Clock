@@ -1,9 +1,21 @@
 body, html {
+    height: 80%;                                       /* To ensure the page takes the full height. */
+    background-color: #011638;
+}
+
+h1 {
+    text-align: center;
+    text-shadow: 2px 2px gray;
+    color: aquamarine;
+    font-size: 42px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.clock-feature-section {
     display: flex;
     justify-content: center;
     align-items: center;                                /* To center the clock in the middle of the screen. */
-    height: 100%;                                       /* To ensure the page takes the full height. */
-    background-color: black;
 }
 
 .main {
@@ -27,13 +39,13 @@ body, html {
     position: absolute;                                 /* To place the hand inside ".clock" relative to its edges. */
     bottom: 50%;                                        /* To ensure the hand starts at center-bottom. */
     left: 50%;                                          /* To move the hand to the center horizontally. */
-    transform-origin: 50% 100%;                         /* To ensure the rotation happens from the bottom center. */
+    transform-origin: bottom center;                    /* To ensure the rotation happens from the bottom center. */
     transition: transform 0.05s linear;                 /* To makes the rotation smooth. */
 }
 
 .hour-hand {
     width: 6px;
-    height: 5em;
+    height: 6em;
     background: black;
     border-radius: 5px;
     z-index: 10;
@@ -41,7 +53,7 @@ body, html {
 
 .minute-hand {
     width: 4px;
-    height: 7em;
+    height: 9em;
     background: gray;
     border-radius: 5px;
     z-index: 5;
@@ -50,7 +62,7 @@ body, html {
 .second-hand {
     background: red;
     width: 2px;                                         /* To make the second-hand thin. */
-    height: 10em;                                      /* To make the second-hand long enough to reach the clock's edge. */
+    height: 10em;                                       /* To make the second-hand long enough to reach the clock's edge. */
     transition-timing-function: steps(60, end);         /* To make the second-hand jumps once per second like a real clock. */
     will-change: transform;                             /* To prevent second-hand appearing thinner at every minute. */
     z-index: 0;

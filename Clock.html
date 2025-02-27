@@ -11,6 +11,9 @@
 </head>
 
 <body>
+    <div class="itle"><h1>Clock Theme Customizer</h1></div>
+
+    <div class="clock-feature-section">
     <div class="main">
         <div class="clock">
             <!--  ".hand" class for common styles shared with other clock hands, ".*-hand" for specific styles for the each hand.  -->
@@ -28,9 +31,9 @@
                 <div class="tick tick-3">
                     <p>2</p>
                 </div>
-                <div class="tick tick-4">
+                <span class="tick tick-4">
                     <p>3</p>
-                </div>
+                </span>
                 <div class="tick tick-5">
                     <p>4</p>
                 </div>
@@ -74,6 +77,9 @@
                     <button class="theme-button" data-theme="theme4">
                         Theme 4
                     </button>
+                    <button class="theme-button" data-theme="theme5">
+                        Theme 5
+                    </button>
                     <button class="theme-button" data-theme="themeDef">
                         Default
                     </button>
@@ -83,6 +89,7 @@
             <button class="scroll-btn" onclick="scrollDown()">▼</button>
         </div>
 
+    </div>
     </div>
     <script>
         const buttons = document.querySelectorAll('.theme-button');
