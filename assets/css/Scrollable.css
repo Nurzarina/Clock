@@ -8,7 +8,7 @@
 
 .scroll-wrapper {
     width: 10em;
-    height: 9em;                      /* Enought to show 3 buttons. */
+    height: 16em;                      /* Enough to show 3 buttons. */
     overflow: hidden;
     position: relative;
 }

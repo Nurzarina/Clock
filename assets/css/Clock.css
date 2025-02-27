@@ -50,7 +50,7 @@ body, html {
 .second-hand {
     background: red;
     width: 2px;                                         /* To make the second-hand thin. */
-    height: 8em;                                      /* To make the second-hand long enough to reach the clock's edge. */
+    height: 10em;                                      /* To make the second-hand long enough to reach the clock's edge. */
     transition-timing-function: steps(60, end);         /* To make the second-hand jumps once per second like a real clock. */
     will-change: transform;                             /* To prevent second-hand appearing thinner at every minute. */
     z-index: 0;
