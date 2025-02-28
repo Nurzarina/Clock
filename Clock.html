@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Analogue Clock</title>
     <link rel="stylesheet" href="/assets/css/Clock.css" />
-    <link rel="stylesheet" href="/assets/css/Scrollable.css" />
+    <link rel="stylesheet" href="/assets/css/Buttons.css" />
     <link id="theme-stylesheet" rel="stylesheet" href="/assets/css/theme1.css" />
 </head>
 
 <body>
-    <div class="itle"><h1>Clock Theme Customizer</h1></div>
+    <div class="title"><h1>Clock Theme Customizer</h1></div>
 
     <div class="clock-feature-section">
     <div class="main">
@@ -20,6 +20,7 @@
             <div class="hand hour-hand"></div>
             <div class="hand minute-hand"></div>
             <div class="hand second-hand"></div>
+            <div class="hand gear"></div>
             <!-- Clock Dials -->
             <div class="dial">
                 <div class="tick tick-1">
@@ -93,11 +94,19 @@
     </div>
     <script>
         const buttons = document.querySelectorAll('.theme-button');
+        const clickSound = new Audio("/assets/sounds/button-pressed-38129.mp3");
+        clickSound.volume = 0.1;
+
+        function playClickSound () {
+            clickSound.currentTime = 0;
+            clickSound.play();
+        }
 
         buttons.forEach(button => {
             button.addEventListener('click', function () {
                 buttons.forEach(btn => btn.classList.remove('active'));
                 this.classList.add('active');
+                playClickSound();
 
                 const themeName = this.dataset.theme;
                 applyTheme(themeName);
@@ -115,6 +124,7 @@
             if (prevButton) {
                 activeButton.classList.remove("active");
                 prevButton.classList.add("active");
+                playClickSound();
                 applyTheme(prevButton.dataset.theme);                   // Change the theme based on button.
             }
         }
@@ -127,6 +137,7 @@
             if (nextButton) {
                 activeButton.classList.remove("active");
                 nextButton.classList.add("active");
+                playClickSound();
                 applyTheme(nextButton.dataset.theme);                  // Change theme based on button.
             }
         }
@@ -134,8 +145,6 @@
     </script>
 
     <script src="/assets/js/Clock.js"></script>
-    <script src="/assets/js/themeSwitcher.js"></script>
-    <script src="/assets/js/Scrollable.js"></script>
 </body>
 
 </html>

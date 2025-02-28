@@ -4,6 +4,10 @@
     background-position: cover;
 }
 
+.minute-hand, .gear {
+    background-color: darkgoldenrod;
+}
+
 .dial {
     position: absolute;
     top: 0;

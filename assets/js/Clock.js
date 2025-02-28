@@ -6,6 +6,9 @@ function updateClock() {
     const minutes = now.getMinutes();
     const hours = now.getHours() % 12;
 
+    const tickSound = new Audio("assets/sounds/ticking-clock_1-27477.mp3");
+    tickSound.volume = 0.05;
+
     // To convert time to rotation angles for seconds-hand, minute-hand and hour-hand.
     const secondDeg = seconds * 6;                                                          // For each second, the second-hand moves 6 degrees (360°/60seconds).
     const secondHand = document.querySelector('.second-hand');
@@ -21,10 +24,13 @@ function updateClock() {
     } else {
         secondHand.style.transform = `rotate(${secondDeg}deg)`;                             // So that the rotation is updated normally for 1-59 seconds.
     }
-    
+
     document.querySelector(".minute-hand").style.transform = `rotate(${minutesDeg}deg)`;    // To move the minute-hand to the correct position based on the calculated angles.
     document.querySelector(".hour-hand").style.transform = `rotate(${hoursDeg}deg)`;        // To move the hour-hand to the correct position based on the calculated angles.
 
+    // Play ticking sound
+    tickSound.currentTime = 0;                                                              // Rewind ticking sound to start to prevent delay.
+    tickSound.play();
 }
 
 setInterval(updateClock, 1000);                                                             // To update the hands rotation every 1000 milliseconds (1 second).
