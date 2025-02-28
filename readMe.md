@@ -6,6 +6,7 @@
 1. An analogue clock UI that displays current time.
 2. A seconds-hand that continuously move without glitching or is visually altered at every minute.
 3. Enables user to change theme for the clock dynamically.
+4. Responsive design.
 
 ## Technology stack : 
 HTML, CSS, JavaScript.
