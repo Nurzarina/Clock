@@ -23,8 +23,12 @@
     transform-origin: top center;
     height: 15px;
     width: 20px;
-    background-color: #6b5648;
+    background-color: grey;
     border-radius: 50%;
+}
+
+.medium-tick {
+    visibility: hidden;
 }
 
 .tick p {
@@ -85,4 +89,23 @@
 
 .tick-12 { 
     transform: translateX(-50%) rotate(330deg) translateY(-190px);
+}
+
+@media only screen and (max-width: 768px) {
+
+    .tick-1 { 
+        transform: translateX(-50%) rotate(0deg) translateY(-185px);
+    }
+
+    .tick-4 { 
+        transform: translateX(-50%) rotate(90deg) translateY(-180px);
+    }
+
+    .tick-7 { 
+        transform: translateX(-50%) rotate(180deg) translateY(-185px);
+    }
+
+    .tick-10 { 
+        transform: translateX(-50%) rotate(270deg) translateY(-180px);
+    }
 }

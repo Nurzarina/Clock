@@ -23,40 +23,40 @@
             <div class="hand gear"></div>
             <!-- Clock Dials -->
             <div class="dial">
-                <div class="tick tick-1">
+                <div class="tick main-tick tick-1">
                     <p>12</p>
                 </div>
-                <div class="tick tick-2">
+                <div class="tick medium-tick tick-2">
                     <p>1</p>
                 </div>
-                <div class="tick tick-3">
+                <div class="tick medium-tick tick-3">
                     <p>2</p>
                 </div>
-                <span class="tick tick-4">
+                <span class="tick main-tick tick-4">
                     <p>3</p>
                 </span>
-                <div class="tick tick-5">
+                <div class="tick medium-tick tick-5">
                     <p>4</p>
                 </div>
-                <div class="tick tick-6">
+                <div class="tick medium-tick tick-6">
                     <p>5</p>
                 </div>
-                <div class="tick tick-7">
+                <div class="tick main-tick tick-7">
                     <p>6</p>
                 </div>
-                <div class="tick tick-8">
+                <div class="tick medium-tick tick-8">
                     <p>7</p>
                 </div>
-                <div class="tick tick-9">
+                <div class="tick medium-tick tick-9">
                     <p>8</p>
                 </div>
-                <div class="tick tick-10">
+                <div class="tick main-tick tick-10">
                     <p>9</p>
                 </div>
-                <div class="tick tick-11">
+                <div class="tick medium-tick tick-11">
                     <p>10</p>
                 </div>
-                <div class="tick tick-12">
+                <div class="tick medium-tick tick-12">
                     <p>11</p>
                 </div>
             </div>
@@ -85,6 +85,7 @@
                         Default
                     </button>
                 </div>
+                <div id="display-theme">Theme 1</div>
             </div>
 
             <button class="scroll-btn" onclick="scrollDown()">▼</button>
@@ -117,6 +118,7 @@
             document.getElementById("theme-stylesheet").setAttribute("href", `/assets/css/${themeName}.css`)
         }
 
+        
         function scrollUp() {
             let activeButton = document.querySelector(".theme-button.active");
             let prevButton = activeButton.previousElementSibling;
@@ -126,10 +128,13 @@
                 prevButton.classList.add("active");
                 playClickSound();
                 applyTheme(prevButton.dataset.theme);                   // Change the theme based on button.
+                let formattedPrevThemeName = prevButton.dataset.theme
+                .replace(/theme(\d)/, "Theme $1")
+                .replace("themeDef", "Default Theme");
+                document.getElementById("display-theme").textContent = formattedPrevThemeName;
             }
         }
 
-        // Function to make selection scrolled down the theme buttons.
         function scrollDown() {
             let activeButton = document.querySelector(".theme-button.active");
             let nextButton = activeButton.nextElementSibling;
@@ -139,6 +144,10 @@
                 nextButton.classList.add("active");
                 playClickSound();
                 applyTheme(nextButton.dataset.theme);                  // Change theme based on button.
+                let formattedNextThemeName = nextButton.dataset.theme
+                .replace(/theme(\d)/, "Theme $1" )
+                .replace("themeDef", "Default Theme");
+                document.getElementById("display-theme").textContent = formattedNextThemeName;
             }
         }
 

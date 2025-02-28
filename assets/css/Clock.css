@@ -24,8 +24,10 @@ h1 {
 }
 
 .clock {
-    width: 400px;
-    height: 400px;                                      /* To create a 200x200px white square for clock face. */
+    width: 95vw;
+    max-width: 25em;
+    height: 97vw;                                      /* To create a 200x200px white square for clock face. */
+    max-height: 25em;
     background: white;
     border: 3px solid grey;
     border-radius: 10px;
@@ -44,16 +46,16 @@ h1 {
 }
 
 .hour-hand {
-    width: 6px;
-    height: 6em;
+    width: 2%;
+    height: 25%;
     background: black;
     border-radius: 5px;
     z-index: 10;
 }
 
 .minute-hand {
-    width: 4px;
-    height: 9em;
+    width: 1.5%;
+    height: 35%;
     background: gray;
     border-radius: 5px;
     z-index: 5;
@@ -61,8 +63,8 @@ h1 {
 
 .second-hand {
     background: red;
-    width: 2px;                                         /* To make the second-hand thin. */
-    height: 10em;                                       /* To make the second-hand long enough to reach the clock's edge. */
+    width: 1%;                                         /* To make the second-hand thin. */
+    height: 40%;                                       /* To make the second-hand long enough to reach the clock's edge. */
     transition-timing-function: steps(60, end);         /* To make the second-hand jumps once per second like a real clock. */
     will-change: transform;                             /* To prevent second-hand appearing thinner at every minute. */
     z-index: 0;
@@ -70,11 +72,33 @@ h1 {
 
 .gear {
     background-color: gray;
-    width: 13px;
-    height: 13px;
+    width: 3%;
+    height: 3%;
     border-radius: 50%;
     z-index: 0;
     position: absolute;
-    bottom: 49%;
-    left: 49.3%;
+    bottom: 48.5%;
+    left: 49.5%;
+}
+
+@media only screen and (max-width: 768px) {
+    
+    body, html {
+        height: 100%;
+        overflow: scroll;
+        overflow-y: scroll;
+    }
+
+    h1 {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        padding: 0.5em;
+        font-size: 32px;
+    }
+
+    .main {
+        flex-direction: column;
+        gap: 10px;
+    }
+
 }
