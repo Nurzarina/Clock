@@ -1,5 +1,15 @@
 .clock {
     border-radius: 50%;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    overflow: hidden;
+}
+
+.minute-hand {
+    background: white;
+}
+
+.second-hand, .minute-hand, .hour-hand {
+    z-index: 20;
 }
 
 .dial {
@@ -16,6 +26,26 @@
     top: 30%;
     left: 50%;
     transform-origin: bottom center;
+    border: 1px white solid;
+    border-radius: 50%;
+    max-height: 20%;
+    width: 20%;
+    text-align: center;
+    z-index: 0;
+}
+
+.tick p {
+    color: white;
+    font-size: 26px;
+    font-weight: bolder;
+}
+
+.main-tick {
+    border: none;
+}
+
+.main-tick p {
+    font-size: 60px;
 }
 
 .tick-1 { 
