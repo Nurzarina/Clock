@@ -23,3 +23,8 @@ HTML, CSS, JavaScript.
   └── README.md
 
 ````
+
+## Attribution
+Sound Effects: <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=76039">freesound_community</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=76039">Pixabay</a>
+<br>
+Image: <a href="https://www.freepik.com/free-photo/black-white-details-moon-texture-concept_29662111.htm#fromView=keyword&page=1&position=14&uuid=4bc730a4-fcae-444c-9a88-73a3a381a973&query=Moon+Texture"> Freepik</a>
