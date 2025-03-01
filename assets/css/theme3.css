@@ -1,15 +1,21 @@
 .clock {
     border-radius: 50%;
+    border:5px lightslategrey solid;
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     overflow: hidden;
 }
 
-.minute-hand {
-    background: white;
+.hour-hand {
+    z-index: 10;
 }
 
-.second-hand, .minute-hand, .hour-hand {
-    z-index: 20;
+.minute-hand, .gear {
+    background: whitesmoke;
+    z-index: 8;
+}
+
+.second-hand {
+    z-index: 5;
 }
 
 .dial {
@@ -49,11 +55,11 @@
 }
 
 .tick-1 { 
-    transform: translateX(-50%) rotate(0deg) translateY(-130px);
+    transform: translateX(-50%) rotate(0deg) translateY(-170%);
 }
 
 .tick-2 { 
-    transform: translateX(-50%) rotate(30deg) translateY(-130px);
+    transform: translateX(-50%) rotate(30deg) translateY(-170%);
 }
 
 .tick-2 p {
@@ -62,7 +68,7 @@
 }
 
 .tick-3 { 
-    transform: translateX(-50%) rotate(60deg) translateY(-130px);
+    transform: translateX(-50%) rotate(60deg) translateY(-170%);
 }
 
 .tick-3 p {
@@ -71,7 +77,7 @@
 }
 
 .tick-4 { 
-    transform: translateX(-50%) rotate(90deg) translateY(-130px);
+    transform: translateX(-50%) rotate(90deg) translateY(-170%);
 }
 
 .tick-4 p {
@@ -80,7 +86,7 @@
 }
 
 .tick-5 { 
-    transform: translateX(-50%) rotate(120deg) translateY(-130px);
+    transform: translateX(-50%) rotate(120deg) translateY(-170%);
 }
 
 .tick-5 p {
@@ -89,7 +95,7 @@
 }
 
 .tick-6 { 
-    transform: translateX(-50%) rotate(150deg) translateY(-130px);
+    transform: translateX(-50%) rotate(150deg) translateY(-170%);
 }
 
 .tick-6 p {
@@ -98,7 +104,7 @@
 }
 
 .tick-7 { 
-    transform: translateX(-50%) rotate(180deg) translateY(-130px);
+    transform: translateX(-50%) rotate(180deg) translateY(-170%);
 }
 
 .tick-7 p {
@@ -107,7 +113,7 @@
 }
 
 .tick-8 { 
-    transform: translateX(-50%) rotate(210deg) translateY(-130px);
+    transform: translateX(-50%) rotate(210deg) translateY(-170%);
 }
 
 .tick-8 p {
@@ -116,7 +122,7 @@
 }
 
 .tick-9 { 
-    transform: translateX(-50%) rotate(240deg) translateY(-130px);
+    transform: translateX(-50%) rotate(240deg) translateY(-170%);
 }
 
 .tick-9 p {
@@ -125,7 +131,7 @@
 }
 
 .tick-10 { 
-    transform: translateX(-50%) rotate(270deg) translateY(-130px);
+    transform: translateX(-50%) rotate(270deg) translateY(-170%);
 }
 
 .tick-10 p {
@@ -134,7 +140,7 @@
 }
 
 .tick-11 { 
-    transform: translateX(-50%) rotate(300deg) translateY(-130px);
+    transform: translateX(-50%) rotate(300deg) translateY(-163%);
 }
 
 .tick-11 p {
@@ -143,7 +149,7 @@
 }
 
 .tick-12 { 
-    transform: translateX(-50%) rotate(330deg) translateY(-130px);
+    transform: translateX(-50%) rotate(330deg) translateY(-170%);
 }
 
 .tick-12 p {

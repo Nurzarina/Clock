@@ -1,3 +1,7 @@
+.clock {
+    border:5px grey solid;
+}
+
 .dial {
     position: absolute;
     top: 0;

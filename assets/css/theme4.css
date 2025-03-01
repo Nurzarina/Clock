@@ -1,5 +1,6 @@
 .clock {
     border-radius: 50%;
+    border:5px lightslategrey solid;
 }
 
 .dial {
@@ -12,12 +13,11 @@
 
 .tick {
     position: absolute;
-    font-size: 25px;
     top: 50%;
     left: 50%;
     transform-origin: top center;
-    height: 12px;
-    width: 2px;
+    height: 8%;
+    width: 0.3%;
     background-color: black;
 }
 
@@ -26,58 +26,165 @@
 }
 
 .tick-1 { 
-    transform: translateX(-50%) rotate(0deg) translateY(-190px);
-    height: 30px;
-    width: 4px;
+    transform: translateX(-50%) rotate(0deg) translateY(-240%);
+    height: 20%;
+    width: 1%;
 }
 
 .tick-2 { 
-    transform: translateX(-50%) rotate(30deg) translateY(-190px);
+    transform: translateX(-50%) rotate(30deg) translateY(-580%);
 }
 
 .tick-3 { 
-    transform: translateX(-50%) rotate(60deg) translateY(-190px);
+    transform: translateX(-50%) rotate(60deg) translateY(-580%);
 }
 
 .tick-4 { 
-    transform: translateX(-50%) rotate(90deg) translateY(-190px);
-    height: 30px;
-    width: 4px;
+    transform: translateX(-50%) rotate(90deg) translateY(-240%);
+    height: 20%;
+    width: 1%;
 }
 
 .tick-5 { 
-    transform: translateX(-50%) rotate(120deg) translateY(-190px);
+    transform: translateX(-50%) rotate(120deg) translateY(-580%);
 }
 
 .tick-6 { 
-    transform: translateX(-50%) rotate(150deg) translateY(-190px);
+    transform: translateX(-50%) rotate(150deg) translateY(-580%);
 }
 
 .tick-7 { 
-    transform: translateX(-50%) rotate(180deg) translateY(-190px);
-    height: 30px;
-    width: 4px;
+    transform: translateX(-50%) rotate(180deg) translateY(-240%);
+    height: 20%;
+    width: 1%;
 }
 
 .tick-8 { 
-    transform: translateX(-50%) rotate(210deg) translateY(-190px);
+    transform: translateX(-50%) rotate(210deg) translateY(-580%);
 }
 
 .tick-9 { 
-    transform: translateX(-50%) rotate(240deg) translateY(-190px);
+    transform: translateX(-50%) rotate(240deg) translateY(-580%);
 }
 
 .tick-10 { 
-    transform: translateX(-50%) rotate(270deg) translateY(-190px);
-    height: 30px;
-    width: 4px;
+    transform: translateX(-50%) rotate(270deg) translateY(-240%);
+    height: 20%;
+    width: 1%;
 }
 
 .tick-11 { 
-    transform: translateX(-50%) rotate(300deg) translateY(-190px);
+    transform: translateX(-50%) rotate(300deg) translateY(-580%);
 }
 
 .tick-12 { 
-    transform: translateX(-50%) rotate(330deg) translateY(-190px);
+    transform: translateX(-50%) rotate(330deg) translateY(-580%);
 }
 
+@media screen and (max-width:768px) and (orientation: portrait) {
+    .tick-1 { 
+        transform: translateX(-50%) rotate(0deg) translateY(-240%);
+        height: 20%;
+        width: 1%;
+    }
+    
+    .tick-2 { 
+        transform: translateX(-50%) rotate(30deg) translateY(-590%);
+    }
+    
+    .tick-3 { 
+        transform: translateX(-50%) rotate(60deg) translateY(-570%);
+    }
+    
+    .tick-4 { 
+        transform: translateX(-50%) rotate(90deg) translateY(-225%);
+        height: 20%;
+        width: 1%;
+    }
+    
+    .tick-5 { 
+        transform: translateX(-50%) rotate(120deg) translateY(-570%);
+    }
+    
+    .tick-6 { 
+        transform: translateX(-50%) rotate(150deg) translateY(-575%);
+    }
+    
+    .tick-7 { 
+        transform: translateX(-50%) rotate(180deg) translateY(-240%);
+        height: 20%;
+        width: 1%;
+    }
+    
+    .tick-8 { 
+        transform: translateX(-50%) rotate(210deg) translateY(-580%);
+    }
+    
+    .tick-9 { 
+        transform: translateX(-50%) rotate(240deg) translateY(-570%);
+    }
+    
+    .tick-10 { 
+        transform: translateX(-50%) rotate(270deg) translateY(-225%);
+        height: 20%;
+        width: 1%;
+    }
+    
+    .tick-11 { 
+        transform: translateX(-50%) rotate(300deg) translateY(-570%);
+    }
+    
+    .tick-12 { 
+        transform: translateX(-50%) rotate(330deg) translateY(-580%);
+    }
+}
+
+@media screen and (max-width:768px) and (orientation: landscape) {
+    .tick-1 { 
+        transform: translateX(-50%) rotate(0deg) translateY(-240%);
+    }
+    
+    .tick-2 { 
+        transform: translateX(-50%) rotate(30deg) translateY(-600%);
+    }
+    
+    .tick-3 { 
+        transform: translateX(-50%) rotate(60deg) translateY(-600%);
+    }
+    
+    .tick-4 { 
+        transform: translateX(-50%) rotate(90deg) translateY(-240%);
+    }
+    
+    .tick-5 { 
+        transform: translateX(-50%) rotate(120deg) translateY(-600%);
+    }
+    
+    .tick-6 { 
+        transform: translateX(-50%) rotate(150deg) translateY(-600%);
+    }
+    
+    .tick-7 { 
+        transform: translateX(-50%) rotate(180deg) translateY(-240%);
+    }
+    
+    .tick-8 { 
+        transform: translateX(-50%) rotate(210deg) translateY(-600%);
+    }
+    
+    .tick-9 { 
+        transform: translateX(-50%) rotate(240deg) translateY(-600%);
+    }
+    
+    .tick-10 { 
+        transform: translateX(-50%) rotate(270deg) translateY(-240%);
+    }
+    
+    .tick-11 { 
+        transform: translateX(-50%) rotate(300deg) translateY(-600%);
+    }
+    
+    .tick-12 { 
+        transform: translateX(-50%) rotate(330deg) translateY(-600%);
+    }
+}

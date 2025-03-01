@@ -78,10 +78,10 @@ h1 {
     z-index: 0;
     position: absolute;
     bottom: 48.5%;
-    left: 49.5%;
+    left: 49%;
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (orientation: portrait) {
     
     body, html {
         height: 100%;
@@ -101,4 +101,22 @@ h1 {
         gap: 10px;
     }
 
+    .clock {
+        width: 90vw;
+    }
 }
+
+@media screen and (max-width:768px) and (orientation: landscape) {
+    h1 {
+        margin-top: 0.5%;
+        margin-bottom: 1.5%;
+        padding: 0.5em;
+        font-size: 30px;
+    }
+
+    .clock {
+        margin-bottom: 5%;
+    }
+}
+
+
